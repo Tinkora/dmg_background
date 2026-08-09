@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   rust:
-    uses: Tinkora/.github/.github/workflows/reusable-rust-quality.yml@e967aed0860957b24daf57e66766713c60b5bcae # Tinkora organization baseline
+    uses: Tinkora/.github/.github/workflows/reusable-rust-quality.yml@21145ce218263e3b30359bab0c748da4702f801b # Tinkora workflow bundle
     with:
       working-directory: .
       toolchain: 1.85.0
@@ -17,7 +17,7 @@ jobs:
       coverage: true
 
   wasm:
-    uses: Tinkora/.github/.github/workflows/reusable-wasm-quality.yml@e967aed0860957b24daf57e66766713c60b5bcae # Tinkora organization baseline
+    uses: Tinkora/.github/.github/workflows/reusable-wasm-quality.yml@21145ce218263e3b30359bab0c748da4702f801b # Tinkora workflow bundle
     with:
       working-directory: crates/dmg_background_web
       toolchain: 1.85.0

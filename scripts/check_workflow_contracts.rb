@@ -3,7 +3,7 @@
 require "optparse"
 require "yaml"
 
-REUSABLE_WORKFLOW_COMMIT = "e967aed0860957b24daf57e66766713c60b5bcae"
+REUSABLE_WORKFLOW_COMMIT = "21145ce218263e3b30359bab0c748da4702f801b"
 PAGES_MAIN_CONDITION = "github.ref == 'refs/heads/main'"
 PAGES_WASM_ARTIFACT = "wasm-package-${{ github.run_id }}-${{ github.run_attempt }}"
 PAGES_SOURCE_ARTIFACT = "pages-source-${{ github.run_id }}-${{ github.run_attempt }}"
