@@ -1,0 +1,8 @@
+# Default ownership
+* @tinkeragora
+
+# Security and automation boundaries
+/.github/ @tinkeragora
+/crates/dmg_background_core/ @tinkeragora
+/crates/dmg_background_web/src/ @tinkeragora
+/SECURITY.md @tinkeragora

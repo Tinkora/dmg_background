@@ -1,0 +1,7 @@
+/target/
+/dist/
+crates/dmg_background_web/static/pkg/
+crates/dmg_background_web/node_modules/
+crates/dmg_background_web/playwright-report/
+crates/dmg_background_web/test-results/
+.playwright-cli/

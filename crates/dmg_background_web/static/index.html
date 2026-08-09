@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>DMG Background | Tinkora</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-lockup">
+      <span class="brand">Tinkora</span>
+      <h1>DMG Background</h1>
+    </div>
+    <span class="local-badge">Browser local</span>
+  </header>
+
+  <main id="app" aria-busy="true">
+    <aside id="sidebar" aria-labelledby="controls-heading">
+      <h2 id="controls-heading">Layout controls</h2>
+
+      <form id="controls" novalidate>
+        <fieldset class="control-section view-controls">
+          <legend>View</legend>
+          <div class="segmented" role="group" aria-label="Preview mode">
+            <button id="btn-preview" type="button" aria-pressed="true">Finder preview</button>
+            <button id="btn-formal" type="button" aria-pressed="false">Formal background</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="control-section">
+          <legend>Window</legend>
+          <div id="presets" class="preset-grid" aria-label="Window presets">
+            <button type="button" data-width="600" data-height="400">600 x 400</button>
+            <button type="button" data-width="800" data-height="450">800 x 450</button>
+            <button type="button" data-width="1024" data-height="640">1024 x 640</button>
+            <button type="button" data-width="1200" data-height="800">1200 x 800</button>
+          </div>
+          <div class="field-grid two-columns">
+            <label for="window-width">Width</label>
+            <label for="window-height">Height</label>
+            <input id="window-width" type="number" min="320" max="4096" value="800" inputmode="numeric">
+            <input id="window-height" type="number" min="320" max="4096" value="450" inputmode="numeric">
+          </div>
+          <label for="volume-name">Volume name</label>
+          <input id="volume-name" type="text" value="Example" maxlength="120">
+        </fieldset>
+
+        <fieldset class="control-section">
+          <legend>Background</legend>
+          <label for="background-color">Color</label>
+          <input id="background-color" type="color" value="#f1f3f2">
+          <label for="background-image">Background image</label>
+          <input id="background-image" type="file" accept="image/png,image/jpeg">
+        </fieldset>
+
+        <fieldset class="control-section">
+          <legend>Copy</legend>
+          <label for="title-text">Title</label>
+          <input id="title-text" type="text" value="Drag Example to Applications" maxlength="80">
+          <label for="footer-text">Footer</label>
+          <textarea id="footer-text" maxlength="160">Find the app in Applications after installation</textarea>
+        </fieldset>
+
+        <fieldset class="control-section">
+          <legend>Item position</legend>
+          <label for="position-item">Item to position</label>
+          <select id="position-item">
+            <option value="application">Application</option>
+            <option value="applications_alias">Applications alias</option>
+          </select>
+          <div class="field-grid two-columns">
+            <label for="item-x">Item X</label>
+            <label for="item-y">Item Y</label>
+            <input id="item-x" type="number" inputmode="numeric">
+            <input id="item-y" type="number" inputmode="numeric">
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button id="apply-layout" class="primary" type="button" disabled>Apply layout</button>
+          <button id="export-zip" class="primary" type="button" disabled>Export ZIP</button>
+          <button id="reset-layout" class="secondary" type="button" disabled>Reset</button>
+        </div>
+
+        <p id="status" role="status" aria-live="polite">Loading</p>
+      </form>
+    </aside>
+
+    <section id="workspace" aria-labelledby="preview-heading">
+      <div class="workspace-header">
+        <h2 id="preview-heading">Preview</h2>
+        <span id="canvas-size" aria-label="Canvas size">800 x 450</span>
+      </div>
+      <div id="canvas-wrap" data-mode="preview">
+        <canvas id="canvas" role="img" aria-label="DMG layout preview" tabindex="0">
+          DMG layout preview
+        </canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>Tinkora / dmg_background</footer>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

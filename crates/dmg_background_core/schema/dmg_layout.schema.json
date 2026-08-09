@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tinkora.github.io/dmg_background/schema/dmg-layout-v1.json",
+  "title": "dmg_background layout document",
+  "description": "This schema validates document shape and scalar ranges. Cross-field rules such as required item counts, unique IDs, icon/text bounds, and guide bounds are enforced by dmg_background_core::LayoutDocument::validate.",
+  "type": "object",
+  "required": ["$schema", "schema_version", "coordinate_space", "window", "icon_size", "background", "items", "texts", "guides", "export"],
+  "properties": {
+    "$schema": { "const": "https://tinkora.github.io/dmg_background/schema/dmg-layout-v1.json" },
+    "schema_version": { "const": 1 },
+    "coordinate_space": { "const": "finder_content_logical_points" },
+    "window": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 320, "maximum": 4096 },
+        "height": { "type": "integer", "minimum": 320, "maximum": 4096 }
+      },
+      "additionalProperties": true
+    },
+    "icon_size": { "type": "integer", "minimum": 2, "maximum": 4096, "multipleOf": 2 },
+    "background": {
+      "type": "object",
+      "required": ["one_x", "two_x"],
+      "properties": {
+        "one_x": { "const": ".background/background.png" },
+        "two_x": { "const": ".background/background@2x.png" }
+      },
+      "additionalProperties": true
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "x", "y", "label"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["application", "applications_alias", "extra_file"] },
+          "x": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+          "y": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+          "label": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "x", "y", "width", "height", "font_size", "content"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "x": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+          "y": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+          "width": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+          "height": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+          "font_size": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+          "content": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "guides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["axis", "position"],
+        "properties": {
+          "axis": { "enum": ["horizontal", "vertical"] },
+          "position": { "type": "integer", "minimum": 0, "maximum": 4294967295 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "export": {
+      "type": "object",
+      "required": ["volume_name", "hidden_files_policy"],
+      "properties": {
+        "volume_name": { "type": "string" },
+        "hidden_files_policy": { "const": "background_directory" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
