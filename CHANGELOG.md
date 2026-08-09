@@ -13,3 +13,8 @@ will follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Native Rust, WASM, real Chromium, documentation, supply-chain, and Pages
   quality gates.
 - English documentation with Chinese entry points.
+
+### Changed
+
+- Updated ZIP export to `zip` 7.2.0 while retaining standard Deflate output
+  through the explicit `flate2` backend.

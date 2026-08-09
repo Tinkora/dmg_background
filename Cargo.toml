@@ -12,7 +12,7 @@ rust-version = "1.85"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 thiserror = "2.0"
-zip = { version = "7.2", default-features = false, features = ["deflate"] }
+zip = { version = "7.2", default-features = false, features = ["deflate-flate2"] }
 wasm-bindgen = "0.2"
 js-sys = "0.3"
 serde-wasm-bindgen = "0.6"
