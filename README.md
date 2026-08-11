@@ -6,10 +6,12 @@ it does not create, sign, or notarize a `.dmg`.
 
 [简体中文](README.zh-CN.md)
 
-> **Pre-release:** the core contract and browser editor are implemented, but no
-> versioned release or non-maintainer usage has been recorded yet.
+> **Pre-release maturity:** `v0.1.0` is the first versioned public release. No
+> non-maintainer workflow has been recorded yet, so this is not a stable claim.
 
 [Open the browser editor](https://tinkora.github.io/dmg_background/)
+
+[Download v0.1.0 and verification assets](https://github.com/Tinkora/dmg_background/releases/tag/v0.1.0)
 
 ## Why This Exists
 
