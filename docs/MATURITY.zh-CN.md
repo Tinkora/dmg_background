@@ -4,8 +4,8 @@
 
 ## 当前标签
 
-**Pre-release。** 仓库尚无版本化 Release，也没有非维护者的真实工作流记录。仅通过测试
-或部署预览，不足以标记为 Alpha、Beta 或 Stable。
+**Pre-release。** `v0.1.0` 是首个公开 Release，但尚无非维护者的真实工作流记录。
+仅有版本化 Release 和通过测试，不足以标记为 Alpha、Beta 或 Stable。
 
 ## 能力标签
 

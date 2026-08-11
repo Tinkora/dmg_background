@@ -4,9 +4,9 @@
 
 ## Current Label
 
-**Pre-release.** The repository has no versioned release and no recorded
-non-maintainer workflow. Passing tests or deploying a preview does not by
-itself justify Alpha, Beta, or Stable.
+**Pre-release.** Version `v0.1.0` is the first public release, but there is no
+recorded non-maintainer workflow. A versioned release and passing tests do not
+by themselves justify Alpha, Beta, or Stable.
 
 ## Capability Labels
 
