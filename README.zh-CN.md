@@ -6,10 +6,12 @@ Finder 布局清单。它生成的是供独立 macOS 打包器消费的设计输
 
 [English](README.md)
 
-> **预发布：** 核心契约和浏览器编辑器已经实现，但目前还没有版本化 Release，
-> 也没有非维护者的实际使用记录。
+> **预发布成熟度：** `v0.1.0` 是首个公开的版本化 Release。由于尚无非维护者的实际
+> 使用记录，因此这并不代表稳定版本承诺。
 
 [打开浏览器编辑器](https://tinkora.github.io/dmg_background/)
+
+[下载 v0.1.0 及验证资产](https://github.com/Tinkora/dmg_background/releases/tag/v0.1.0)
 
 ## 为什么需要它
 
