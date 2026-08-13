@@ -6,7 +6,17 @@ it does not create, sign, or notarize a `.dmg`.
 
 [简体中文](README.zh-CN.md)
 
-[![Support Tinkora on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/tinkora)
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+  <a href="https://ko-fi.com/tinkora" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://ko-fi.com/img/githubbutton_sm.svg"
+      alt="Support Tinkora on Ko-fi"
+      width="520"
+    >
+  </a>
+</p>
+<!-- markdownlint-enable MD033 -->
 
 > **Pre-release maturity:** `v0.1.0` is the first versioned public release. No
 > non-maintainer workflow has been recorded yet, so this is not a stable claim.
