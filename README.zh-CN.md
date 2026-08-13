@@ -6,7 +6,17 @@ Finder 布局清单。它生成的是供独立 macOS 打包器消费的设计输
 
 [English](README.md)
 
-[![在 Ko-fi 上支持 Tinkora](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/tinkora)
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+  <a href="https://ko-fi.com/tinkora" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://ko-fi.com/img/githubbutton_sm.svg"
+      alt="在 Ko-fi 上支持 Tinkora"
+      width="520"
+    >
+  </a>
+</p>
+<!-- markdownlint-enable MD033 -->
 
 > **预发布成熟度：** `v0.1.0` 是首个公开的版本化 Release。由于尚无非维护者的实际
 > 使用记录，因此这并不代表稳定版本承诺。
