@@ -14,7 +14,7 @@
     "test:wasm-smoke:local": "npm run build:wasm && npm run test:wasm-smoke"
   },
   "devDependencies": {
-    "@playwright/test": "1.62.1",
+    "@playwright/test": "1.63.0",
     "http-server": "14.1.1"
   }
 }
